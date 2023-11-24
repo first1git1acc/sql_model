@@ -21,5 +21,5 @@ import sys
 sys.path.append('mysite/myapp/urls.py')
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('shop/',include('myapp.urls'))
+    path('shop/',include('myapp.urls',namespace="myapp"))
 ]
