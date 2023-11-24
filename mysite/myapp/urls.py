@@ -7,5 +7,6 @@ import views
 app_name = 'myapp'
 
 urlpatterns = [
-    path("",views.mainpage,name="mainpage")
+    path("",views.mainpage,name="mainpage"),
+    path("add",views.add,name="add")
 ]
