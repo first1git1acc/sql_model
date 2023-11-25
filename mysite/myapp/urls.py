@@ -8,5 +8,6 @@ app_name = 'myapp'
 
 urlpatterns = [
     path("",views.mainpage,name="mainpage"),
-    path("add",views.add,name="add")
+    path("add",views.add,name="add"),
+    path("myshop",views.myshop,name="myshop")
 ]

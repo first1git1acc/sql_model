@@ -7,6 +7,8 @@ from django.http import HttpResponseRedirect
 
 sys.path.append('mysite/myapp/templates/myapp')
 sys.path.append('D:/sql_model/mysite/myapp/static/styles')
+sys.path.append('D:/sql_model/mysite/myapp')
+from myapp.models import Customer,Product
 
 class FromForm(forms.Form):
     email = forms.CharField(widget=forms.TextInput(attrs={
@@ -48,3 +50,8 @@ def add(request):
     zip_pas_eml = zip(request.session["pas"],request.session["eml"])
     return render(request,'myapp/add.html',{'vars':zip_pas_eml})
 
+def myshop(request):
+    return render(request,'myapp/myshop.html',{
+        "customers":Customer.objects.all(),
+        "products":Product.objects.all(),
+    })

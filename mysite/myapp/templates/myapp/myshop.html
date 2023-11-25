@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyShop</title>
+</head>
+<body>
+    <ol>
+        {% for i in customers %}
+        <li>customer {{i.name}} : {{i.money}} uan</li>
+        {% endfor %}
+    </ol>
+
+    <ol>
+        {% for j in products %}
+        <li>Product {{j.name_prod}} : {{j.cost}} uan</li>
+        {% endfor %}
+    </ol>
+</body>
+</html>

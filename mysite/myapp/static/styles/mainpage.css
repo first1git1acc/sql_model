@@ -31,11 +31,11 @@ h3{
 }
 input[type="submit"]{
     margin: 12px;
-    background-color:lightgray;
-    border:1px solid gray;
+    background-color:goldenrod;
+    border:1px solid blue;
     border-radius: 10px;
     width:60%;
-    color:red;
+    color:purple;
 }
 input[type="submit"]:hover{
     background-color: aqua;
