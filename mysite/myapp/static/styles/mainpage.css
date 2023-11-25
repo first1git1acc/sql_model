@@ -1,0 +1,45 @@
+#FormContainer{
+    position: relative;
+    top:170px;
+    border:2px solid gray;
+    width:200px;
+    text-align: center;
+    margin: auto;
+    background-color: purple;
+    border-radius: 10px;
+}
+#capt{
+    font-size: 25px;
+}
+tr{
+    display: block;
+    float: left;
+}
+input{
+    padding:5px;
+    margin:12px;
+    border-radius: 10px;
+    border:0px;
+}
+label{
+    color:white;
+    font-size: 20px;
+}
+h3{
+    height: 10px;
+    color: goldenrod;
+}
+input[type="submit"]{
+    margin: 12px;
+    background-color:lightgray;
+    border:1px solid gray;
+    border-radius: 10px;
+    width:60%;
+    color:red;
+}
+input[type="submit"]:hover{
+    background-color: aqua;
+}
+body{
+    background-color: lightsteelblue;
+}

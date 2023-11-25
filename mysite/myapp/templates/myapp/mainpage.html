@@ -1,17 +1,20 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'styles/mainpage.css'%}">
+    <title>Sign in</title>
 </head>
 <body>
-    <h1>main page</h1>
-    <form action="{% url 'myapp:mainpage' %}" method="POST">
-        <caption>SIGN UP</caption>
-        {% csrf_token %}
-        {{ form }}
-        <input type="submit">
-        </form>
+    <div id="FormContainer">
+        <h3 id="capt">Sign in</h3>
+        <form action="{% url 'myapp:mainpage' %}" method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit">
+            </form>
+    </div>   
 </body>
 </html>

@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>add</title>
+    <title>Passwords and emails</title>
 </head>
 <body>
-    <h1>my password and email</h1>
-    <h1>password : </h1>{{pas}}
-    <h1>email : </h1>{{eml}}
+    <ol>
+        {% for i,j in vars %}
+        <li>email : {{j}}, pass : {{i}}</li>
+        {% endfor %}
+    </ol>
  
 </body>
 </html>
