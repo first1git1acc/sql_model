@@ -1,0 +1,20 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/statem.css'%}">
+    <title>MyStates</title>
+</head>
+<body>
+    <h1 id="ch">My States</h1>
+        {% for i in states %}
+        <div>
+            <h1>{{i.title}}</h1>
+            <p>{{i.state}}</p>
+        </div>
+    {% endfor %}
+    
+</body>
+</html>

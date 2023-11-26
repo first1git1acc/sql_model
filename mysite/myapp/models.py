@@ -18,3 +18,7 @@ class Customer(models.Model):
 
     def __str__(self):
         return f"{self.name} have {self.money} money"
+    
+class State(models.Model):
+    state = models.CharField(max_length=1000)
+    title = models.CharField(max_length=64)

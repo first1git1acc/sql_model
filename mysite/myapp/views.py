@@ -8,7 +8,8 @@ from django.http import HttpResponseRedirect
 sys.path.append('mysite/myapp/templates/myapp')
 sys.path.append('D:/sql_model/mysite/myapp/static/styles')
 sys.path.append('D:/sql_model/mysite/myapp')
-from myapp.models import Customer,Product
+
+from myapp.models import Customer,Product,State
 
 class FromForm(forms.Form):
     email = forms.CharField(widget=forms.TextInput(attrs={
@@ -36,6 +37,7 @@ def mainpage(request):
             request.session["pas"] += [pa]
             em_l = form.cleaned_data["email"]
             request.session["eml"] += [em_l]
+            return HttpResponseRedirect(reverse('myapp:add'))
         else:
             return render(request,'myapp/mainpage.html',{'form':FromForm()})
 
@@ -54,4 +56,9 @@ def myshop(request):
     return render(request,'myapp/myshop.html',{
         "customers":Customer.objects.all(),
         "products":Product.objects.all(),
+    })
+
+def createState(request):
+    return render(request,'myapp/states.html',{
+        "states":State.objects.all(),
     })

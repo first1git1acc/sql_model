@@ -9,5 +9,6 @@ app_name = 'myapp'
 urlpatterns = [
     path("",views.mainpage,name="mainpage"),
     path("add",views.add,name="add"),
-    path("myshop",views.myshop,name="myshop")
+    path("myshop",views.myshop,name="myshop"),
+    path("states",views.createState,name="createState")
 ]
